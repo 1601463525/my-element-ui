@@ -1,0 +1,103 @@
+[v-cloak] {
+  display: none;
+}
+
+html,
+body {
+  margin: 0px;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.radius {
+  border-radius: 5px;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.t-c {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+.f-col {
+  flex-direction: column;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.j-c {
+  justify-content: center;
+}
+.j-a {
+  justify-content: space-around;
+}
+.j-e {
+  justify-content: space-evenly;
+}
+.j-s {
+  justify-content: space-between;
+}
+
+.a-c {
+  align-items: center;
+}
+.a-e{
+  align-items: flex-end;
+}
+
+.a-s {
+  align-content: space-between;
+}
+
+#loadingbar {
+  background: linear-gradient(
+    to right,
+    rgb(13, 90, 141),
+    rgb(181, 218, 235),
+    rgb(86, 140, 223)
+  );
+  height: 3px;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 0;
+  animation: grow 1s infinite forwards;
+}
+
+@keyframes grow {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.underline {
+  text-decoration: underline;
+}

@@ -1,0 +1,259 @@
+
+.fraction-box {
+    position: relative;
+    height: calc(100% - 52px);
+    padding: 0 15px;
+    // background: #fff;
+    .check {
+        span {
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #6696ff;
+            border-radius: 2px;
+            color: #6696ff;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+            box-sizing: border-box;
+            position: absolute;
+            z-index: 9999;
+            top: -38px;
+            right: 25px;
+        }
+    }
+    .operate-box {
+        height: 50px;
+        text-align: right;
+        position: relative;
+        z-index: 2000;
+        .filter-box {
+            height: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-top: 10px;
+            .select-box {
+                display: flex;
+                float: left;
+                > div {
+                    font-size: 0;
+                    margin-right: 5px;
+                    &:first-child {
+                        margin-right: 5px;
+                    }
+                    > span {
+                        display: inline-block;
+                        width: 100px;
+                        height: 30px;
+                        line-height: 30px;
+                        font-size: 14px;
+                        color: #808080;
+                        border-right: 1px solid #dcdfe6;
+                        border-radius: 2px 0 0 2px;
+                        background: #f4f8fb;
+                        text-align: center;
+                        border: 1px solid #dcdfe6;
+                        border-right-width: 0;
+                        vertical-align: top;
+                        box-sizing: border-box;
+                    }
+                    .el-select,
+                    .el-input {
+                        border: none;
+                        width: 205px;
+                    }
+                }
+            }
+            .filter-commit {
+                display: inline-block;
+                width: 60px;
+                height: 30px;
+                line-height: 30px;
+                border: 1px solid #6696ff;
+                border-radius: 2px;
+                color: #6696ff;
+                font-size: 14px;
+                cursor: pointer;
+                text-align: center;
+                box-sizing: border-box;
+            }
+            .filter-reset {
+                display: inline-block;
+                width: 60px;
+                height: 30px;
+                line-height: 30px;
+                border: 1px solid #808080;
+                border-radius: 2px;
+                color: #808080;
+                font-size: 14px;
+                cursor: pointer;
+                text-align: center;
+                box-sizing: border-box;
+                margin: 0 10px 0 10px;
+            }
+        }
+        .operate-btn {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            line-height: 28px;
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 2px;
+            margin: 10px 10px 0 0;
+            border: 1px solid #6696ff;
+            i {
+                margin-right: 4px;
+            }
+            &.add {
+                color: #fff;
+                background: #6696ff;
+            }
+            &.delete {
+                color: #606266;
+                border-color: #dcdfe6;
+            }
+            &:hover {
+                background: #7fa8ff;
+                color: #fff;
+                border-color: #7fa8ff;
+            }
+            &:active {
+                background: #6696ff;
+                color: #fff;
+                border-color: #6696ff;
+            }
+        }
+    }
+    .table-box {
+        height: calc(100% - 50px);
+        //margin: 0 10px;
+        .tableInfo {
+            height: 100%;
+            /deep/tr {
+                th:nth-child(8) {
+                    .cell {
+                        text-align: center;
+                    }
+                }
+                td:nth-child(8) {
+                    .cell {
+                        text-align: center;
+                    }
+                }
+            }
+            /deep/.cell {
+                i {
+                    font-size: 14px;
+                }
+                .icon {
+                    cursor: pointer;
+                    &:hover {
+                        color: #4c85ff;
+                    }
+                    &.icon-active {
+                        color: #4c85ff;
+                    }
+                }
+                text-align: center;
+                span.status {
+                    display: inline-block;
+                    width: 60px;
+                    line-height: 26px;
+                    color: #fff;
+                    font-size: 14px;
+                    &.is-no {
+                        background: #808080;
+                    }
+                    &.is-up {
+                        background: #67af00;
+                    }
+                    &.is-down {
+                        background: #f21d26;
+                    }
+                }
+                span.name {
+                    font-size:14px;
+                    color: #4C85FF;
+                    cursor: pointer;
+                }
+            }
+            .operator-box {
+                position: fixed;
+                padding: 0 20px;
+                background: #fff;
+                box-shadow: 0px 3px 5px 0px rgba(14, 5, 10, 0.18);
+                border-radius: 5px;
+                z-index: 1000;
+                li {
+                    line-height: 30px;
+                    font-size: 14px;
+                    color: #454545;
+                    cursor: pointer;
+                    &:hover {
+                        color: #4c85ff;
+                    }
+                }
+            }
+            .operating {
+                color: #2B90F7;
+                font-size: 14px;
+                margin: 0 2px;
+                cursor: pointer;
+                &:hover {
+                    color: #4c85ff;
+                }
+            }
+        }
+    }
+}
+/deep/.el-select {
+    width: 175px !important;
+    .el-input__inner {
+        height: 30px;
+        line-height: 30px;
+    }
+    .el-input__suffix-inner {
+        i {
+            line-height: 30px;
+        }
+    }
+}
+/deep/ .el-input {
+    width: 175px !important;
+    .el-input__inner {
+        height: 30px;
+        line-height: 30px;
+    }
+    .el-input__suffix {
+        i {
+            line-height: 30px !important;
+        }
+    }
+}
+/deep/ .el-button--medium {
+    padding: 5px 10px !important;
+}
+/deep/ .el-range-editor {
+    width: 220px!important;
+    height: 30px !important;
+    line-height: 30px !important;
+    i {
+        line-height: 25px !important;
+    }
+    .el-range-separator {
+        line-height: 25px !important;
+    }
+}
+/deep/ .el-table{
+            td {
+                .cell {
+                    height: 35px !important;
+                    line-height: 35px !important;
+                }
+            }
+}
+
